@@ -4,9 +4,10 @@ public class login {
     //Atributos
     private String correo;
     private String contraseña;
+    private String rol;
 
     //Constructor
-    public login(String correo, String contraseña){
+    public login(String correo, String contraseña, String rol){
         this.correo = correo;
         this.contraseña = contraseña;
     }
@@ -20,6 +21,11 @@ public class login {
         this.contraseña = contraseña;
     }
 
+    public void setRol(String rol){
+        this.rol = rol;
+    }
+    
+
     //Getters
     public String getCorreo(){
         return correo;
@@ -27,5 +33,9 @@ public class login {
 
     public String getContraseña(){
         return contraseña;
+    }
+
+    public String getRol(){
+        return rol;
     }
 }
