@@ -1,38 +1,25 @@
 package administrador.models;
 
-public class administrador {
-    private String nombre;
-    private String contacto;
-    private String correo;
-    private String contraseña;
+import users.models.user;
+
+public class administrador extends user {
     private String registrarEstudiante;
     private String registrarProfesor;
+    private String registrarMateria;
+    private String asignarMateriaDocente;
+    private String actualizarUsuario;
+    private String eliminarUsuario;
+    private String listarUsuario;
 
-    public administrador(String nombre, String contacto, String correo, String contraseña, String registrarEstudiante, String registrarProfesor) {
-        this.nombre = nombre;
-        this.contacto = contacto;
-        this.correo = correo;
-        this.contraseña = contraseña;
+    public administrador( String id, String name, String email, String password, String cellphone, String profile, String registrarEstudiante, String registrarProfesor) {
+        super(id, name, email, password, cellphone, profile);
         this.registrarEstudiante = registrarEstudiante;
         this.registrarProfesor = registrarProfesor;
+
     }
 
     //setters
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-    
-    public void setContacto(String contacto){
-        this.contacto = contacto;
-    }
 
-    public void setCorreo(String correo){
-        this.correo = correo;
-    }
-
-    public void setContraseña(String contraseña){
-        this.contraseña = contraseña;
-    }
     public void setRegistrarEstudiante(String registrarEstudiante){
         this.registrarEstudiante = registrarEstudiante;
     }
@@ -40,27 +27,49 @@ public class administrador {
         this.registrarProfesor = registrarProfesor;
     }
 
+    public void setRegistrarMateria(String registrarMateria){
+        this.registrarMateria = registrarMateria;
+    }
+
+    public void setActualizarUsuario(String actualizarUsuario){
+        this.actualizarUsuario = actualizarUsuario;
+    }
+
+    public void setEliminarUsuario(String eliminarUsuario){
+        this.eliminarUsuario = eliminarUsuario;
+    }
+
+    public void setListarUsuario(String listarUsuario){
+        this.listarUsuario = listarUsuario;
+    }
+
     //Getters
 
-    public String getNombre(){
-        return nombre;
-    }
 
-    public String getContacto(){
-        return contacto;
-    }
-
-    public String getCorreo(){
-        return correo;
-    }
-
-    public String getContraseña(){
-        return contraseña;
-    }
     public String getRegistrarEstudiante(){
         return registrarEstudiante;
     }
     public String getRegistrarProfesor(){
         return registrarProfesor;
+    }
+
+    public String getRegistrarMateria(){
+        return registrarMateria;
+    }
+
+    public String getAsignarMateriaDocente(){
+        return asignarMateriaDocente;
+    }
+
+    public String getActualizarUsuario(){
+        return actualizarUsuario;
+    }
+
+    public String getEliminarUsuario(){
+        return eliminarUsuario;
+    }
+
+    public String getListarUsuario(){
+        return listarUsuario;
     }
 }
